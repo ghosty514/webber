@@ -1,19 +1,25 @@
 ﻿body {
     text-align: center;
-    animation-name: example;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    background-color: red;
+}
+
+header {
+    background-color: cyan;
+    padding: auto;
+
 }
 
 h1 {
     font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
 }
 
 @keyframes example {
-    0%   {background-color:red;}
-    50% {background-color:purple;}
-    100% {background-color: red;}
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 button {
@@ -23,8 +29,25 @@ button {
     padding: 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
+    float:left;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    max-width: 120%;
+}
+
+iframe {
+    
 }
