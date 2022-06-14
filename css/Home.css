@@ -1,0 +1,44 @@
+﻿header {
+    background-color: white;
+}
+
+body {
+    text-align: center;
+    background-color: #66A8FF;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+    background-color: #7166FF;
+}
+
+button {
+    background-color: #BD66FF; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    float:left;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    max-width: 120%;
+}
+
+iframe {
+    
+}
