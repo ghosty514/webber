@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html>
+
+<head>
     <link rel="stylesheet" href="css\Home.css">
-    <script>
-        var audio = new Audio('audio/staple stable.mp3');
-        function playAudio() {
-            audio.play()
-            audio.volume = 0.05;
-        }
-        function stopAudio() {
-            if (audio.paused) {
-                audio.play();
-            }
-            else {
-                audio.pause();
-            }
-        }
-    </script>
-    <body onload="playAudio()">
-        <header><img width = 50% height = auto src="images\header_test.png"></header>
-        <h1>
-            <button>Home</button>
-            <a href="pictures.html"><button>Pictures</button></a>
-            <a href="videos.html"><button>Videos</button></a>
-            <button onclick="stopAudio()">Pause</button>
-        </h1>
-    </body>
+    <script src="js/script.js"></script>
+</head>
+
+<body onload="playAudio()">
+    <h1><img width=50% height=auto src="images\header_test.png"></h1>
+    <div id="Home">
+        <button onclick="return show('Home','Pictures','Videos');">Home</button>
+        <button onclick="return show('Pictures','Home','Videos');">Pictures</button>
+        <button onclick="return show('Videos','Home','Pictures');">Videos</button>
+        <button onclick="stopAudio()">Pause</button>
+    </div>
+
+    <div id="Pictures" style="display:none">
+        <button onclick="return show('Home','Pictures','Videos');">Home</button>
+        <button onclick="return show('Pictures','Home','Videos');">Pictures</button>
+        <button onclick="return show('Videos','Home','Pictures');">Videos</button>
+        <button onclick="stopAudio()">Pause</button>
+        <div class="row">
+            <div class="column">
+                <img src="images/brimstone_wojak.png">
+                <img src="images/flip.gif">
+                <img src="images/zoom.png">
+            </div>
+            <div class="column">
+                <img src="images/microceleb.png">
+                <img src="images/watering.png">
+                <img src="images/jermaspin.gif">
+            </div>
+            <div class="column">
+                <img src="images/shrigma.jpg">
+                <img src="images/happydoge.jpg">
+                <img src="images/ipaddress.gif">
+            </div>
+        </div>
+        <button id="topBut" onclick="TTT()"></button>
+    </div>
+
+    <div id="Videos" style="display:none">
+        <button onclick="return show('Home','Pictures','Videos');">Home</button>
+        <button onclick="return show('Pictures','Home','Videos');">Pictures</button>
+        <button onclick="return show('Videos','Home','Pictures');">Videos</button>
+        <button onclick="stopAudio()">Pause</button>
+        <div class="row">
+            <div class="column">
+                <iframe src="https://www.youtube.com/embed/HVsoQMsW7z0"></iframe>
+                <iframe src="https://www.youtube.com/embed/N2JsClYxvds"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
